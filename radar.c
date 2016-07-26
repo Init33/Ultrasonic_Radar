@@ -7,7 +7,7 @@
 
 
 #include <c8051f120.h>     // SFR declarations
-#include "Assignment 3.h"
+#include "radar.h"
 #include <stdio.h>
 
 //delay variables
