@@ -1,11 +1,3 @@
-/*
-/*
-/*
-/*
-/*
-/*
-
-
 #include <c8051f120.h>     // SFR declarations
 #include "radar.h"
 #include <stdio.h>
