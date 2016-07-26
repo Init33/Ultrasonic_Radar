@@ -4,7 +4,9 @@
     Author: Jesse Nolan    
     Year: 2014           
 
-    Description:
+    Description: Scanning ultrasonic sensor used as a radar that scans a 180 degree area and maps detected objects on
+                    an LCD screen. Optional alarm system that detects objects closer than a given threshold distance. 
+                    Commands given to the 8051 board through UART using putty.
 _______________________________________________________________________________________________________________________*/
 
 #ifndef A3_XX_h
@@ -53,9 +55,24 @@ sbit Servo_Ctrl = P0 ^ 4;	// Servo control pin
 ----------------------------------------------------*/
 void main(void);
 void General_Init(void);
-void Timer_Init();
+void Timer_Init(void);
 void LCD_Init(void);
-void Interrupts_Init();
+void Interrupts_Init(void);
 void External_INT0_ISR(void);
+void UART_Init(void);
+void PCA_Init(void);
+void Voltage_Reference_Init(void);
+void DAC_Init(void);
+void set_duty(unsigned short int duty);
+void delay(unsigned char H,unsigned char L);
+void ping(void);
+void LCD_display(char string[]);
+void LCD_clear(void);
+void radar_calc(void);
+void LCD_shift(void);
+void OLED_init(void);
+void OLED_drawline(unsigned char x1H, unsigned char x1L, unsigned char y1H, unsigned char y1L, unsigned char x2H, unsigned char x2L, unsigned char y2H, unsigned char y2L, unsigned char col1, unsigned char col2);
+void send_uart(unsigned char byte);
+void ping_average(void);
 
 #endif  
