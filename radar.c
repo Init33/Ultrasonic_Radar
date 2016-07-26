@@ -1,5 +1,12 @@
+/*
+/*
+/*
+/*
+/*
+/*
+
+
 #include <c8051f120.h>     // SFR declarations
-//#include <C8051F120_defs.h>
 #include "Assignment 3.h"
 #include <stdio.h>
 
@@ -43,14 +50,8 @@ unsigned char angle_string[5] = {0,0,0,0,0};
 unsigned char dist_string[5] = {0,0,0,0,0};
 //used to keep track of when the OLED is enabled
 unsigned char OLED_enable = 0;
-
 unsigned int ping_inc;
-
-int i;
-int j = 0;
-int k;
-int z = 0;
-int p;
+int i,j,k,z,p;
 //used for uart communication
 int send_instructions = 0;
 //keeps track of when the servo is on
@@ -58,8 +59,7 @@ unsigned int servo_stopped = 0;
 
 code char message[166] =
 {
-	"\n----------PRISMATIC CORE ONLINE------------\nHello welcome to radar \nOptions:\ns: stop sweeping\ng: start sweeping\no: stop alarm\np: start alarm\nr: start radar display\n"
-	
+	"\nHello welcome to radar \nOptions:\ns: stop sweeping\ng: start sweeping\no: stop alarm\np: start alarm\nr: start radar display\n"
 };
 code char message2[21] =
 {
